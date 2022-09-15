@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\Http",
+    "\\app\\Http\\Controllers",
+    "\\app\\Libraries",
+    "\\routes",
+    "\\Themes",
+    "\\Themes\\theme",
+    "\\Themes\\theme\\views"
+  ],
+  "SelectedNode": "\\app\\Http\\Controllers\\HomeController.php",
+  "PreviewInSolutionExplorer": false
+}
