@@ -21,7 +21,11 @@ and is wrapped around the whole page content, except for the footer in this exam
   <h1><b>MY BLOG</b></h1>
   <p>Welcome to the blog of <span class="w3-tag">my story</span></p>
 </header>
-
+<form action="/logout" method="post">
+          @csrf 
+          <div class="text-center"><button type="submit" class="btn btn-danger">Logout</button></div>
+  
+        </form>
 <!-- Grid -->
 <div class="w3-row">
 
