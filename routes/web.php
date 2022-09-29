@@ -14,20 +14,22 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-//  Route::get('/', [HomeController::class,'index']);
-//  Route::get('dashboard', 'DashboardController@index');
     Route::get('/', 'HomeController@index');
-    #Route::get('/login', 'RegisterController@index');
 
     Route::get('/register', 'RegisterController@index');
     Route::post('/register', 'RegisterController@store');
 
     Route::get('/login', 'LogInController@index')->middleware('guest');
-    #Route::post('/login', 'LogInController@authenticate');
     Route::post('login', [ 'as' => 'login', 'uses' => 'LogInController@authenticate']);
-    Route::get('/homepage', 'HomePageController@index')->middleware('auth');
-
     Route::post('/logout', 'LogInController@logout');
+
+    Route::get('/admin/home', 'admin\HomePageController@index');
+
+    #Route::get('/', [HomeController::class,'index']);
+    #Route::get('dashboard', 'DashboardController@index');
+    #Route::get('/login', 'RegisterController@index');
+    #Route::post('/login', 'LogInController@authenticate');
+
     /*Route::get('/logout', function () {
         #if (Auth::check()) {
             #flash(getPhrase('success'), getPhrase('logged_out_successfully.'), 'success');
