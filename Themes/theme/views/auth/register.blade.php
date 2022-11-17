@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iofrm</title>
+    <title>Register</title>
     <link rel="stylesheet" type="text/css" href="{{ asset('ioFolder/css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('ioFolder/css/fontawesome-all.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('ioFolder/css/iofrm-style.css') }}">
@@ -49,15 +49,15 @@
                         -->
 
                         {!! Form::open(array('url' => '/register', 'method' => 'POST', 'name'=>"registrationForm")) !!}
-
-                        {{ Form::text('name', $value = null , $attributes = array('class'=>'form-control', 'placeholder' => 'Full Name',  'required'=> 'true', )) }}
-
-                        {{ Form::text('user_name', $value = null , $attributes = array('class'=>'form-control', 'placeholder' => 'User Name',  'required'=> 'true', )) }}
-
-                        {{ Form::text('phone', $value = null , $attributes = array('class'=>'form-control', 'placeholder' => 'Phone Number',  'required'=> 'true', )) }}
-
-                        {{ Form::email('email', $value = null , $attributes = array('class'=>'form-control', 'placeholder' => 'Email',  'required'=> 'true', )) }}
-
+                        Full Name:
+                        {{ Form::text('name', $value = null , $attributes = array('class'=>'form-control',  'required'=> 'true', )) }}
+                        UserName:
+                        {{ Form::text('user_name', $value = null , $attributes = array('class'=>'form-control',  'required'=> 'true', )) }}
+                        Phone Number :
+                        {{ Form::text('phone', $value = null , $attributes = array('class'=>'form-control','required'=> 'true', )) }}
+                        Email:
+                        {{ Form::email('email', $value = null , $attributes = array('class'=>'form-control', 'required'=> 'true', )) }}
+                        Password:
                         {{ Form::password('password', $value = null , $attributes = array('class'=>'form-control', 'placeholder' => 'Password',  'required'=> 'true', )) }}
 
                         <div class="form-button">

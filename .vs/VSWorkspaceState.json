@@ -4,12 +4,13 @@
     "\\app",
     "\\app\\Http",
     "\\app\\Http\\Controllers",
-    "\\app\\Libraries",
-    "\\routes",
-    "\\Themes",
+    "\\app\\Http\\Controllers\\admin",
+    "\\public",
+    "\\public\\adminTemplate",
+    "\\public\\adminTemplate\\images",
     "\\Themes\\theme",
-    "\\Themes\\theme\\views"
+    "\\Themes\\theme\\views\\admin"
   ],
-  "SelectedNode": "\\app\\Http\\Controllers\\HomeController.php",
+  "SelectedNode": "\\app\\Http\\Controllers\\admin\\AdminHomePageController.php",
   "PreviewInSolutionExplorer": false
 }
