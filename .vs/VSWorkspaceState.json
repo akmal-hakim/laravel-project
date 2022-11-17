@@ -5,14 +5,12 @@
     "\\app\\Http",
     "\\app\\Http\\Controllers",
     "\\app\\Http\\Controllers\\admin",
-    "\\app\\Http\\Middleware",
-    "\\database",
-    "\\database\\migrations",
     "\\public",
-    "\\Themes",
+    "\\public\\adminTemplate",
+    "\\public\\adminTemplate\\images",
     "\\Themes\\theme",
-    "\\Themes\\theme\\views"
+    "\\Themes\\theme\\views\\admin"
   ],
-  "SelectedNode": "\\app\\Http\\Middleware\\RedirectIfAuthenticated.php",
+  "SelectedNode": "\\app\\Http\\Controllers\\admin\\AdminHomePageController.php",
   "PreviewInSolutionExplorer": false
 }

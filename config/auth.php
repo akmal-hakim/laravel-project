@@ -40,6 +40,12 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        /*  USE ONLY WHEN YOU USE GUARD LOGIN STYLE 
+        'isAdmin' => [
+            'driver' => 'session',
+            'provider' => 'users',
+        ],
+        */
     ],
 
     /*

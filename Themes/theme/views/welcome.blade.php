@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Anno - Digital Agency HTML5 Template</title>
+<!-- <title>Anno - Digital Agency HTML5 Template</title> -->
+<title>Anno - Photography Class</title>
 <link rel="shortcut icon" href="{{ asset('themeHome/images/favicon.ico')}} ">
 <!--{{themes('vendors/css/vendors.min.css')}}-->
 <!-- Core Style Sheets -->
@@ -55,15 +56,15 @@
       <!--== End Atribute Navigation ==-->
 
       <!--== Start Header Navigation ==-->
-      <div class="navbar-header">
+      <div class="navbar-header ">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"> <i class="tr-icon ion-android-menu"></i> </button>
-        <div class="logo"> <a href="index.html"> <img class="logo logo-display" src="{{ asset('themeHome/images/logo-white.png') }}" alt=""> <img class="logo logo-scrolled" src="assets/images/logo-black.png" alt=""> </a> </div>
+        <div class="logo"> <a href="index.html"> <img class="logo logo-display" src="{{ asset('themeHome/images/logo-white.png') }}" alt=""> <img class="logo logo-scrolled" src="{{ asset('themeHome/images/logo-black.png') }}" alt=""> </a> </div>
       </div>
       <!--== End Header Navigation ==-->
 
       <!--== Collect the nav links, forms, and other content for toggling ==-->
       
-      <div class="collapse navbar-collapse" id="navbar-menu">
+      <div class="collapse navbar-collapse " id="navbar-menu">
         <ul class="nav navbar-nav navbar-center" data-in="fadeIn" data-out="fadeOut">
         <!--
           <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Concepts</a>
@@ -80,13 +81,14 @@
               <li><a href="home-image-bg.html">Home Image Background</a></li>
               <li><a href="home-video-bg.html">Home Video Background</a></li>
               <li><a href="home-kenburn.html">Home Kenburn</a></li>
+              hidden-xl, d-block d-xl-none
             </ul>
           </li>
           -->
-          <li class="link-item"><a class="page-scroll" href="#home">Account</a></li>
-          <li class="link-item"><a class="page-scroll" href="#about">About</a></li>
-          <li class="link-item"><a class="page-scroll" href="#pricing">Pricing</a></li>
-          <li class="link-item"><a class="page-scroll" href="#contact">Contact</a></li>
+          <li class="link-item visible-sm visible-xs"><a class="page-scroll" href="#home">Home</a></li>
+          <li class="link-item visible-sm visible-xs"><a class="page-scroll" href="#about">About us</a></li>
+          <li class="link-item visible-sm visible-xs"><a class="page-scroll" href="#contact">Contact</a></li>
+          <li class="link-item visible-sm visible-xs"><a class="page-scroll" href="{{URL_LOGIN}}">SignIn</a></li>
         </ul>
       </div>
       
@@ -99,10 +101,10 @@
             <a href="#" class="close-side"><i class="icofont icofont-close"></i></a>
             <div class="widget mt-120">
               <ul class="link">
-                <li class="link-item"><a class="page-scroll" href="#home">Account</a></li>
-                <li class="link-item"><a class="page-scroll" href="#about">About</a></li>
-                <li class="link-item"><a class="page-scroll" href="#pricing">Pricing</a></li>
-                <li class="link-item"><a class="page-scroll" href="#contact">Contact</a></li>
+                <li class="link-item"><a class="page-scroll" href="#home">Home</a></li>
+                <li class="link-item"><a class="page-scroll" href="#about">About us</a></li>
+                <li class="link-item"><a class="page-scroll" href="#pricing">Contact</a></li>
+                <li class="link-item"><a class="page-scroll" href="{{URL_LOGIN}}">SignIn</a></li>
               </ul>
             </div>
             <ul class="social-media">
@@ -123,28 +125,28 @@
   <section class="home-slider" id="home">
     <div class="default-slider slick">
       <div class="slide">                       <!-- background-image:url({{url('images/php_mysql.jpg')}}) Cara tulis background -->
-        <div class="slide-img parallax-effect" style="background:url( {{ url('themeHome/images/slides/home1.webp') }} ) center center / cover scroll no-repeat;"></div>
+        <div class="slide-img parallax-effect" style="background:url( {{ url('themeHome/images/slides/home4.png') }} ) center center / cover scroll no-repeat;"></div>
         <div class="hero-text-wrap">
           <div class="hero-text white-color">
             <div class="container">
               <div class="white-color text-center">
-                <h1 class="white-color font-800 font-100px line-height-90" data-backfont="Minimal">Digital Creations</h1>
-                <h4 class="white-color font-600 mt">Learn the skills and tips on pixel art</h4>
-                <p class="text-center mt-30"><a class="btn btn-light-outline btn-lg radius-0 xs-mb-20">Purchase Theme</a> <a class="btn btn-color btn-lg radius-0">Start a Project</a> </p>
+                <h1 class="white-color font-800 font-100px line-height-90" data-backfont="Move">Become Professional Photographer</h1>
+                <h4 class="white-color font-600 mt">Learn the skills and tips by pro</h4>
+                <p class="text-center mt-30"><a class="btn btn-light-outline btn-lg radius-0 xs-mb-20">Contact Us</a> <a class="btn btn-color btn-lg radius-0">Join Us</a> </p>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="slide">
-        <div class="slide-img parallax-effect" style="background:url( {{ url('themeHome/images/slides/home2.png') }} ) center center / cover scroll no-repeat;"></div>
+        <div class="slide-img parallax-effect" style="background:url( {{ url('themeHome/images/slides/home3.png') }} ) center center / cover scroll no-repeat;"></div>
         <div class="hero-text-wrap">
           <div class="hero-text white-color">
             <div class="container">
               <div class="white-color text-center">
-                <h1 class="white-color font-800 font-100px line-height-90" data-backfont="Minimal">Creative Designs</h1>
+                <h1 class="white-color font-800 font-100px line-height-90" data-backfont="Beyond">Shot the moments</h1>
                 <h4 class="white-color font-600 mt-0">Core to the success of what we achieve for our clients</h4>
-                <p class="text-center mt-30"><a class="btn btn-light-outline btn-lg radius-0 xs-mb-20">Purchase Theme</a> <a class="btn btn-light-outline btn-lg radius-0">Start a Project</a> </p>
+                <p class="text-center mt-30"><a class="btn btn-light-outline btn-lg radius-0 xs-mb-20">Learn more about us</a>  <a class="btn btn-color btn-lg radius-0">Join Us</a> </p>
               </div>
             </div>
           </div>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iofrm</title>
+    <title>Login</title>
     <link rel="stylesheet" type="text/css" href="{{ asset('ioFolder/css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('ioFolder/css/fontawesome-all.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('ioFolder/css/iofrm-style.css') }}">
@@ -28,8 +28,8 @@
             <div class="form-holder">
                 <div class="form-content">
                     <div class="form-items">
-                        <h3>Get more things done with Loggin platform.</h3>
-                        <p>Access to the most powerfull tool in the entire design and web industry.</p>
+                        <h3>Signup And Become a Professional</h3>
+                        <p>Access to the most powerfull tool in the entire photography industry.</p>
                         <div class="page-links">
                             <a class="active" href="{{URL_LOGIN}}">Login</a><a href="{{URL_REGISTER}}" >Register</a>
                         </div>
@@ -44,18 +44,17 @@
                         -->
         
                         {!! Form::open(array('url' => '/login', 'method' => 'POST', 'name'=>"registrationForm")) !!}
-
-                        {{ Form::email('email', $value = null , $attributes = array('class'=>'form-control', 'placeholder' => 'Email',  'required'=> 'true', )) }}
-
+                        Email:
+                        {{ Form::email('email', $value = null , $attributes = array('class'=>'form-control',  'required'=> 'true', )) }}
+                        Password:
                         {{ Form::password('password', $value = null , $attributes = array('class'=>'form-control', 'placeholder' => 'Password',  'required'=> 'true', )) }}
-
                         <div class="form-button">
                                 <button id="submit" type="submit" class="ibtn">Log In</button>
                         </div>
 
                         {!! Form::close() !!}
                         <div class="other-links">
-                            <span>Or login with</span><a href="#">Facebook</a><a href="#">Google</a><a href="#">Linkedin</a>
+                            <span>Follow us on</span><a href="#">Facebook</a><a href="#">Google</a><a href="#">Linkedin</a>
                         </div>
                     </div>
                 </div>

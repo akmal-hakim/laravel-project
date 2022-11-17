@@ -6,6 +6,7 @@ use App\Providers\RouteServiceProvider;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Auth\Middleware\Authenticate as Middleware;
 
 class RedirectIfAuthenticated
 {
@@ -17,17 +18,34 @@ class RedirectIfAuthenticated
      * @param  string|null  ...$guards
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
-    public function handle(Request $request, Closure $next, ...$guards)
+    public function handle($request, Closure $next, $guard = null)
     {
-        $guards = empty($guards) ? [null] : $guards;
+        /*
+            switch (auth()->user()->role_id) {
+                case 1:
+                    return ('/home');
 
-        foreach ($guards as $guard) {
-            if (Auth::guard($guard)->check()) {
-                #return redirect(RouteServiceProvider::HOME);
+                case 2:
+                    return ('/admin/home');
+
+                default:
+                    auth()->logout();
+                    return route('login');
+
+            }
+        */
+        // If a user is authenticated
+        if(Auth::user() != null)
+        {
+            if(Auth::user()->role_id == 1){
+                return redirect('/home');
+            }
+            elseif(Auth::user()->role_id == 2){
+                return redirect('/admin/home');
+            }else{
                 return redirect('/');
             }
         }
-
         return $next($request);
     }
 }

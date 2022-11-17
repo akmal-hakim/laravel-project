@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Gymove - Fitness Bootstrap Admin Dashboard</title>
+    <title>Anno Admin</title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('adminTemplate/images/favicon2.ico') }}">
 	<link rel="stylesheet" href="{{ asset('adminTemplate/vendor/chartist/css/chartist.min.css') }}">
     <link href="{{ asset('adminTemplate/vendor/bootstrap-select/dist/css/bootstrap-select.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('adminTemplate/vendor/owl-carousel/owl.carousel.css') }}" rel="stylesheet">
@@ -38,9 +38,11 @@
         ***********************************-->
         <div class="nav-header">
             <a href="index.html" class="brand-logo">
-                <img class="logo-abbr" src="{{ asset('adminTemplate/images/logo.png') }}" alt="">
+                <img class="logo-abbr" src="{{ asset('adminTemplate/images/logo-black.png') }}" alt="">
+                <!--
                 <img class="logo-compact" src="{{ asset('adminTemplate/images/logo-text.png') }}" alt="">
                 <img class="brand-title" src="{{ asset('adminTemplate/images/logo-text.png') }}" alt="">
+                -->
             </a>
 
             <div class="nav-control">
@@ -657,6 +659,7 @@
 									</div>
                                     <a class="all-notification" href="javascript:void(0)">See all notifications <i class="ti-arrow-right"></i></a>
                                 </div>
+                            <!--
                             </li>
 							<li class="nav-item dropdown notification_dropdown">
                                 <a class="nav-link bell bell-link" href="javascript:void(0)">
@@ -730,12 +733,13 @@
 									</div>
 								</div>
 							</li>
+                            -->
                             <li class="nav-item dropdown header-profile">
                                 <a class="nav-link" href="javascript:void(0)" role="button" data-toggle="dropdown">
-                                    <img src="images/profile/17.jpg" width="20" alt=""/>
+                                    <!-- <img src="images/profile/17.jpg" width="20" alt=""/>-->
 									<div class="header-info">
-										<span class="text-black"><strong>Peter Parkur</strong></span>
-										<p class="fs-12 mb-0">Super Admin</p>
+                                        <p class="fs-12 mb-0">Welcome,</p>
+										<span class="text-black"><strong>{{$username}}</strong></span>
 									</div>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -808,6 +812,7 @@
                             </li>
                         </ul>
                     </li>
+                    <!--
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
 							<i class="flaticon-381-controls-3"></i>
 							<span class="nav-text">Charts</span>
@@ -905,6 +910,7 @@
                             <li><a href="./page-lock-screen.html">Lock Screen</a></li>
                         </ul>
                     </li>
+                    -->
                 </ul>
 				<div class="add-menu-sidebar">
 					<img src="{{ asset('adminTemplate/images/calendar.png') }}" alt="" class="mr-3">

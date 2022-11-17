@@ -4,11 +4,13 @@ namespace App\Http\Controllers\admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 
-class HomePageController extends Controller
+class AdminHomePageController extends Controller
 {
-
+    
     public function __construct()
     {
         $this->middleware('auth');
@@ -16,8 +18,11 @@ class HomePageController extends Controller
 
     public function index()
     {
+        $username = Auth::user()->user_name;
+
+        $data['username'] = $username;
         $data['title'] = 'hi';
-        $view_name = getTheme() . '::homepage.index';
+        $view_name = getTheme() . '::admin.home';
         return view($view_name, $data);
     }
 }

@@ -1,18 +1,22 @@
 <?php
 
-namespace App\Http\Controllers;
-
+namespace App\Http\Controllers\auth;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-
 
 class LoginController extends Controller
 {
 
     use AuthenticatesUsers;
     protected $guard;
+
+    public function __construct()
+    {
+        $this->middleware('guest')->except('logout');
+    }
 
     public function index()
     {
